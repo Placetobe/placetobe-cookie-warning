@@ -1,0 +1,57 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../placetobe-styles/placetobe-styles.html">
+<link rel="import" href="../placetobe-button/placetobe-button.html">
+
+<!--
+`placetobe-cookie-warning`
+Placetobe Cookie Warning
+
+@demo demo/index.html 
+-->
+
+<dom-module id="placetobe-cookie-warning">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      :host section {
+        display: flex;
+        padding: 18px;
+        background-color: var(--placetobe-cookie-background-color, var(--placetobe-color-red));
+      }
+
+      :host article {
+        flex: 2;
+        @apply(--placetobe-font-body);
+      }
+
+      :host placetobe-button {
+        flex: none;
+        margin-left: 18px;
+        --placetobe-button-color: white;
+      }
+
+    </style>
+    <section>
+      <article>Wij gebruiken cookies voor analyse en het goed functioneren van deze website. Gaat u verder op de site? Dan gaat u akkoord om cookies te plaatsen.</article>
+      <placetobe-button>Sluiten</placetobe-button>
+    </section>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'placetobe-cookie-warning',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'placetobe-cookie-warning',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
