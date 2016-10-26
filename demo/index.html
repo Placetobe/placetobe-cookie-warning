@@ -32,11 +32,18 @@
     <div class="vertical-section-container">
       <h3>Basic placetobe-cookie-warning Demo</h3>
       <demo-snippet>
-        <template>
-          <placetobe-cookie-warning></placetobe-cookie-warning>
+        <template is="dom-bind" id="demo">
+          <placetobe-cookie-warning on-cookies-accepted="_showAlertMessage"></placetobe-cookie-warning>
         </template>
       </demo-snippet>
     </div>
+
+    <script>
+      var demo = document.querySelector('#demo');
+      demo._showAlertMessage = function() {
+        alert('User accepted cookies!');
+      }
+    </script>
 
   </body>
 </html>

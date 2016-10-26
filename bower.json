@@ -4,6 +4,7 @@
   "main": "placetobe-cookie-warning.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.6.0",
+    "placetobe-behaviors": "Placetobe/placetobe-behaviors",
     "placetobe-styles": "Placetobe/placetobe-styles",
     "placetobe-button": "Placetobe/placetobe-button"
   },

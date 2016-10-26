@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../placetobe-styles/placetobe-styles.html">
+<link rel="import" href="../placetobe-behaviors/placetobe-styles-behavior.html">
 <link rel="import" href="../placetobe-button/placetobe-button.html">
 
 <!--
@@ -37,7 +38,7 @@ Placetobe Cookie Warning
     </style>
     <section>
       <article>Wij gebruiken cookies voor analyse en het goed functioneren van deze website. Gaat u verder op de site? Dan gaat u akkoord om cookies te plaatsen.</article>
-      <placetobe-button>Sluiten</placetobe-button>
+      <placetobe-button on-tap="_handleTapClose">Sluiten</placetobe-button>
     </section>
   </template>
 
@@ -45,13 +46,11 @@ Placetobe Cookie Warning
     Polymer({
 
       is: 'placetobe-cookie-warning',
+      behaviors: [PlacetobeStylesBehavior],
 
-      properties: {
-        prop1: {
-          type: String,
-          value: 'placetobe-cookie-warning',
-        },
-      },
+      _handleTapClose: function() {
+        this.fire('cookies-accepted');
+      }
 
     });
   </script>
