@@ -17,19 +17,20 @@ Placetobe Cookie Warning
       }
 
       :host section {
-        display: flex;
-        padding: 18px;
+        @apply(--placetobe-flex-layout--horizontal);
+        @apply(--placetobe-border-box);
+        padding: var(--placetobe-margin);
         background-color: var(--placetobe-cookie-background-color, var(--placetobe-color-red));
       }
 
       :host article {
-        flex: 2;
+        @apply(--placetobe-flex-item--2);
         @apply(--placetobe-font-body);
       }
 
       :host placetobe-button {
-        flex: none;
-        margin-left: 18px;
+        @apply(--placetobe-flex-item--none);
+        margin-left: var(--placetobe-margin);
         --placetobe-button-color: white;
       }
 
